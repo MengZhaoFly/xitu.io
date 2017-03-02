@@ -1,0 +1,157 @@
+    /*css reset 网页重置 */
+    *{
+            margin: 0;
+            padding: 0;
+            border: 0;  /*android img 丑边框*/
+            vertical-align: baseline;     /*垂直对齐 基线 垂直方向上中间baseline*/
+    }
+    *,*:after,*:before{
+        box-sizing: border-box;
+    }
+    a{
+        color: #007fff;
+        text-decoration: none;
+        cursor:pointer;
+
+    }
+    html,body{
+        height: 100%;
+    }
+    body{
+        font-style: 16px;
+        font-family: Helvetica,Arial, sans-serif;
+        color: #fff;
+        background-color: #262423;
+        overflow-x:scroll;
+        overflow-y: hidden; 
+    }
+    p{
+        margin: 1em 0px;
+
+    }
+    section{
+        width: 200%;
+        height: 100%;
+        /*文字渲染优化 抗锯齿*/
+        text-rendering: optimizeLegibility;
+        /*立体感增强  x Y 阴影厚度*/
+        text-shadow: 1px 1px 3px #333;
+        -webkit-font-smoothing:antialiased;
+
+    }
+    article{
+        cursor: pointer;
+        float: left;
+        position: relative;
+        width:20%;
+        height: 100%;
+        padding:1em;
+        text-align: center;
+        overflow: hidden;
+    }
+    /*每一个article 宽 因为有五个 20%*/
+    article .bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: no-repeat;
+        background-position: center ;  
+        opacity: .8;
+       -webkit-transition: transform 1s, opacity .3s;
+        transition: transform 1s, opacity .3s;
+    }
+    article:hover .bg{
+        opacity: 1;
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+    /*父容器flex布局 数列排布 居中对齐*/
+    article .inner{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    .title{
+        font-size: 2em;
+
+    }
+    .title img{
+        height: 1em;
+    }
+    .description{
+        margin-bottom: 2em;
+    }
+    /*设置a 链接的样式 */
+    .button{
+        padding: 0.5em 0.8em;
+        border: 1px solid rgba(255, 255, 255,.8);
+        border-radius: 4px;
+        color: #fff;
+        background-color:rgba(0, 0, 0, .2);
+        transition: all .3s;
+    }
+    /*点击时 过度一秒 变化边框*/
+    .button:hover,.button:active{
+        background-color:rgba(0, 0, 0, .3);
+        border-color:#fff;
+    }
+    a.button{
+        transition: all 1s;
+    }
+    .juejing .bg{
+        background-image: url(http://ac-mhke0kuv.clouddn.com/eed2fc073c4c55fe.jpg);
+        background-position: left center;
+    }
+    .xitu .bg{
+        background-image: url(http://ac-mhke0kuv.clouddn.com/9c81da6663ab88c2.jpg);
+        background-position: 20% center;
+    }
+    .training .bg{
+    background-image: url(http://ac-mhke0kuv.clouddn.com/a4b40331828da123.jpg);
+    background-position: center center;
+
+    }
+    .join .bg{
+    background-image: url(http://ac-mhke0kuv.clouddn.com/e89dbc6d3002af17.jpg);
+    background-position: 80% center;
+ 
+    }
+    .about .bg{
+    background-image: url(http://ac-mhke0kuv.clouddn.com/be8cc4a7b22950ea.jpg);
+    background-position: 100% center;
+
+    }
+    footer{
+        cursor: pointer;
+        position: fixed;
+        padding: .5em;
+        top: 1em;
+        right: 1em;
+        font-size: .8em;
+        background-color: black;
+        opacity: .5;
+        transition: all .3s;
+    }
+    footer:hover{
+        opacity: 1;
+    }
+
+    body::-webkit-scrollbar{
+        width: 2px;
+        height: 8px;
+    }
+    body::-webkit-scrollbar-thumb{
+        background-color: #007fff;
+    }
+    body::-webkit-scrollbar-track{
+        background: black;
+    }
